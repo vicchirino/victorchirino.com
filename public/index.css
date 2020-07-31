@@ -1,90 +1,73 @@
-.title {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  background-color: #92a8d1;
-  font-size: 40px;
-}
-
-.social-list {
-  padding: 10px;
-  display: flex;
-  background-color: #92a8d1;
-  flex-direction: row;
-}
-
-.sub-header {
-  padding: 10px;
-  display: flex;
-  font-size: 18px;
-  flex-direction: row;
-  align-items: center;
-}
-
-.ramona-img {
-  display: block;
-  max-width: 230px;
-  max-height: 300px;
-  width: auto;
-  height: auto;
-  padding-bottom: 10px;
-}
-
-.photo-container {
-  padding: 10px;
-  display: flex;
-  font-size: 18px;
-  flex-direction: column;
+:root {
+  --global-font-family: Verdana, sans-serif;
+  --global-font-size: 0.8rem;
+  --global-primary-title-size: 2rem;
+  --color-primary: #363232;
+  --color-secondary: #6b6b6b;
+  --color-black: #161616;
+  --color-white: #fbfbfb;
+  --color-error: #f58945;
+  --color-warning: #ffca35;
 }
 
 .body {
-  background-color: #deeaee;
+  background-color: var(--color-primary);
   margin: 0;
+  border: 10px solid var(--color-white);
+  overflow-x: hidden
 }
 
-.sub-title {
-  padding: 20px 0;
-  color: black;
-  font-size: 20px;
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+}
+
+
+.information-text {
+  text-align: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: center
+}
+
+.name {
+  margin: 5px 0;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--color-white);
+}
+
+.tag {
+  color: var(--color-warning);
+  font-size: 25px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.footer {
+  background-color: var(--color-secondary);
+  width: 100%;
+  height: 10%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-}
-
-.header {
-  padding: 20px 10px;
-  color: black;
-  font-size: 18px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.photo-header {
-  padding-bottom: 10px;
-  color: black;
-  font-size: 18px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.social-row-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.social-icon {
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.social-link {
-  color: black;
-  margin: 5px;
+.social-icon-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon {
+  height: 60%;
+  width: 60%;
 }
