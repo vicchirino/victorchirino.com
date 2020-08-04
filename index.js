@@ -13,9 +13,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
-app.get ('*', function (req, res){
+app.get ('/', function (req, res){
   res.render(`${__dirname}/src/index.html`);    
 });
 
