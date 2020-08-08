@@ -18,13 +18,17 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 4000;
 
 app.get ('/', function (req, res) {
-  res.render(`${__dirname}/src/index.html`);    
+   res.render(`${__dirname}/src/index.html`);    
 });
 
 app.use(express.static(locationURL + 'covid19/build'));
 
 app.get ('/covid19', function (req, res) {
   res.render(`${locationURL}/covid19/build/index.html`);   
+});
+
+app.get ('*', function (req, res) {
+  res.render(`${__dirname}/src/index.html`);    
 });
 
 app.listen(port, () => {

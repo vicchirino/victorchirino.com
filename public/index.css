@@ -1,19 +1,23 @@
 :root {
   --global-font-family: Verdana, sans-serif;
-  --global-font-size: 0.8rem;
-  --global-primary-title-size: 2rem;
-  --color-primary: #363232;
-  --color-secondary: #6b6b6b;
-  --color-black: #161616;
-  --color-white: #fbfbfb;
-  --color-error: #f58945;
-  --color-warning: #ffca35;
+  --color-primary: #FF9F1C;
+  --color-secondary: #50514f;
+  --color-background-primary: #f1f7ed;
+  --color-error: #ff3a20;
+  --color-warning: #ffe066;
+  --color-success: #2ec4b6;
+  --color-information: #457b9d;
+  --color-background: #F9F7F3;
+  --color-text-primary: #212529;
+  --color-text-secondary: #8a817c;
+  --color-alt-text-primary: #ffffff;
+  --color-alt-text-secondary: #CCC5B9;
 }
 
 .body {
-  background-color: var(--color-primary);
+  background-color: var(--color-background-primary);
   margin: 0;
-  border: 10px solid var(--color-white);
+  /* border: 10px solid var(--color-white); */
   overflow-x: hidden
 }
 
@@ -37,16 +41,20 @@
 .name {
   margin: 5px 0;
   font-size: 80px;
-  font-weight: 800;
+  font-weight: bolder;
   letter-spacing: 1.5px;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
-.tag {
-  color: var(--color-warning);
+.tag, a {
+  color: var(--color-text-secondary);
   font-size: 25px;
   font-weight: 600;
   margin: 5px 0;
+
+  /* a {
+    color: var(--color-text-secondary);
+  } */
 }
 
 .footer {
