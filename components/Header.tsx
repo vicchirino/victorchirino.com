@@ -31,13 +31,7 @@ const Header: React.FC = () => {
 					aria-label="night-mode"
 					variant="outline"
 					onClick={() => toggleColorMode()}
-					icon={
-						colorMode === "dark" ? (
-							<SunIcon color={"yellow.300"} />
-						) : (
-							<MoonIcon color={"white"} />
-						)
-					}
+					icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
 				/>
 			),
 		},
@@ -48,7 +42,7 @@ const Header: React.FC = () => {
 			sx={{
 				width: "100%",
 				height: "50px",
-				bgColor: "green.500",
+				bgColor: colorMode === "dark" ? "dark.500" : "light.500",
 				top: "0",
 			}}
 			visibility={{
@@ -58,6 +52,8 @@ const Header: React.FC = () => {
 				sm: "visible",
 				md: "visible",
 				lg: "visible",
+				xl: "visible",
+				xxl: "visible",
 			}}
 		>
 			<Flex justify="flex-end" align="center" flexDirection="row" height="100%">
@@ -70,8 +66,11 @@ const Header: React.FC = () => {
 							sm: "10px",
 							md: "15px",
 							lg: "15px",
+							xl: "15px",
+							xxl: "20px",
 						}}
 						key={p.id}
+						color={colorMode === "dark" ? "brand.600" : "textPrimary.500"}
 					>
 						{p.text ? (
 							<Text
@@ -82,6 +81,8 @@ const Header: React.FC = () => {
 									sm: "md",
 									md: "lg",
 									lg: "xl",
+									xl: "xl",
+									xxl: "xl",
 								}}
 								fontWeight={{
 									xxxsm: "light",
@@ -90,6 +91,8 @@ const Header: React.FC = () => {
 									sm: "bold",
 									md: "bold",
 									lg: "bold",
+									xl: "bold",
+									xxl: "bold",
 								}}
 							>
 								<Link href={p.link}>{p.text}</Link>

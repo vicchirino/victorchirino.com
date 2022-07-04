@@ -1,6 +1,11 @@
-import { Box, Flex, Image, Spacer, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Spacer, Text, useColorMode } from "@chakra-ui/react";
+import { useState } from "react";
+
+const imagesPath = ["/me-1.jpg", "/me-2.jpg"];
 
 const Resume: React.FC = () => {
+	const { colorMode } = useColorMode();
+	const [imageSelected, setImageSelected] = useState(0);
 	return (
 		<Box
 			sx={{}}
@@ -10,14 +15,26 @@ const Resume: React.FC = () => {
 				sm: "25px",
 				md: "50px",
 				lg: "50px",
+				xl: "50px",
+				xxl: "50x",
 			}}
-			marginX="20px"
+			marginX={{
+				xxsm: "10px",
+				xsm: "10px",
+				sm: "20px",
+				md: "50px",
+				lg: "50px",
+				xl: "50px",
+				xxl: "50x",
+			}}
 			padding={{
 				xxsm: "0px",
 				xsm: "0px",
 				sm: "0px",
 				md: "10px",
 				lg: "10px",
+				xl: "10px",
+				xxl: "10x",
 			}}
 		>
 			<Flex
@@ -26,8 +43,10 @@ const Resume: React.FC = () => {
 					xxsm: "column",
 					xsm: "column",
 					sm: "column",
-					md: "row",
+					md: "column",
 					lg: "row",
+					xl: "row",
+					xxl: "row",
 				}}
 				align="center"
 				height="100%"
@@ -38,50 +57,71 @@ const Resume: React.FC = () => {
 						xxxsm: "80%",
 						xxsm: "80%",
 						xsm: "80%",
-						sm: "80%",
-						md: "30%",
-						lg: "30%",
+						sm: "70%",
+						md: "70%",
+						lg: "50%",
+						xl: "40%",
+						xxl: "30%",
 					}}
 					alignItems="center"
 				>
-					<Image src="/me-2.jpg" alt="me" width="100%" />
+					<Image
+						src={imagesPath[imageSelected]}
+						cursor="pointer"
+						border="2px solid"
+						borderColor={colorMode === "dark" ? "brand.400" : "dark.500"}
+						alt="me"
+						width="100%"
+						onClick={() => setImageSelected(imageSelected === 0 ? 1 : 0)}
+					/>
 				</Box>
 				<Box
 					width={{
 						xxxsm: "100%",
 						xxsm: "100%",
-						xsm: "100%",
-						sm: "100%",
-						md: "70%",
-						lg: "70%",
+						xsm: "90%",
+						sm: "80%",
+						md: "80%",
+						lg: "60%",
+						xl: "50%",
+						xxl: "50%",
 					}}
 					marginStart={{
 						xxxsm: "0px",
 						xxsm: "0px",
 						xsm: "0px",
 						sm: "0px",
-						md: "15px",
-						lg: "15px",
+						md: "0px",
+						lg: "20px",
+						xl: "25px",
+						xxl: "30px",
 					}}
 					marginTop={{
-						xxxsm: "10px",
-						xxsm: "10px",
-						xsm: "10px",
-						sm: "10px",
-						md: "0px",
+						xxxsm: "20px",
+						xxsm: "20px",
+						xsm: "20px",
+						sm: "20px",
+						md: "20px",
 						lg: "0px",
+						xl: "0px",
+						xxl: "0px",
 					}}
 				>
 					<Text
 						fontSize={{
 							xxxsm: "lg",
 							xxsm: "xl",
-							xsm: "3xl",
-							sm: "4xl",
-							md: "5xl",
-							lg: "6xl",
+							xsm: "2xl",
+							sm: "2xl",
+							md: "3xl",
+							lg: "3xl",
+							xl: "5xl",
+							xxl: "6xl",
 						}}
 						paddingBottom="10px"
+						color={
+							colorMode === "dark" ? "textSecondary.500" : "textPrimary.500"
+						}
 					>
 						Hello, I’m Victor Chirino 👋🏽
 					</Text>
@@ -90,9 +130,11 @@ const Resume: React.FC = () => {
 							xxxsm: "md",
 							xxsm: "lg",
 							xsm: "xl",
-							sm: "2xl",
-							md: "3xl",
-							lg: "4xl",
+							sm: "xl",
+							md: "xl",
+							lg: "2xl",
+							xl: "2xl",
+							xxl: "3xl",
 						}}
 						paddingBottom="20px"
 					>
@@ -103,9 +145,11 @@ const Resume: React.FC = () => {
 							xxxsm: "md",
 							xxsm: "lg",
 							xsm: "xl",
-							sm: "2xl",
-							md: "3xl",
-							lg: "4xl",
+							sm: "xl",
+							md: "xl",
+							lg: "2xl",
+							xl: "2xl",
+							xxl: "3xl",
 						}}
 						paddingBottom="20px"
 					>
@@ -118,9 +162,11 @@ const Resume: React.FC = () => {
 							xxxsm: "md",
 							xxsm: "lg",
 							xsm: "xl",
-							sm: "2xl",
-							md: "3xl",
-							lg: "4xl",
+							sm: "xl",
+							md: "xl",
+							lg: "2xl",
+							xl: "2xl",
+							xxl: "3xl",
 						}}
 					>
 						I enjoy working collaboratively with others, learning new

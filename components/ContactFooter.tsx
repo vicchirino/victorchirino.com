@@ -54,31 +54,31 @@ const ContactFooter: React.FC = () => {
 						aria-label="linkedin"
 						variant="outline"
 						onClick={() => openSocialNetwork({ network: "linkedin" })}
-						icon={<LinkedinIcon color="#044177" boxSize={7} />}
+						icon={<LinkedinIcon boxSize={7} />}
 					/>
 					<IconButton
 						aria-label="github"
 						variant="outline"
 						onClick={() => openSocialNetwork({ network: "github" })}
-						icon={<GithubIcon color="#044177" boxSize={7} />}
+						icon={<GithubIcon boxSize={7} />}
 					/>
 					<IconButton
 						aria-label="toptal"
 						variant="outline"
 						onClick={() => openSocialNetwork({ network: "toptal" })}
-						icon={<ToptalIcon color="#044177" boxSize={7} />}
+						icon={<ToptalIcon boxSize={7} />}
 					/>
 					<IconButton
 						aria-label="twitter"
 						variant="outline"
 						onClick={() => openSocialNetwork({ network: "twitter" })}
-						icon={<TwitterIcon color="#044177" boxSize={7} />}
+						icon={<TwitterIcon boxSize={7} />}
 					/>
 					<IconButton
 						aria-label="instagram"
 						variant="outline"
 						onClick={() => openSocialNetwork({ network: "instagram" })}
-						icon={<InstagramIcon color="#044177" boxSize={7} />}
+						icon={<InstagramIcon boxSize={7} />}
 					/>
 				</HStack>
 			</Flex>

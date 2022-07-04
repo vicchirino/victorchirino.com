@@ -13,37 +13,55 @@ const breakpoints = {
 	sm: "400px",
 	md: "600px",
 	lg: "800px",
-	xl: "1200px",
+	xl: "1000px",
+	xxl: "1200px",
 };
 
 const theme: ThemeConfig = extendTheme({
 	colors: {
-		primary: {
+		light: {
+			400: "#ffffff",
 			500: "#cfd8dc",
+			600: "#9ea7aa",
 		},
-		primaryLight: {
-			500: "#ffffff",
+		dark: {
+			400: "#6d6d6d",
+			500: "#424242",
+			600: "#1b1b1b",
 		},
-		primaryDark: {
-			500: "9ea7aa",
-		},
-		secondary: {
+		brand: {
+			400: "#ffd149",
 			500: "#ffa000",
+			600: "#c67100",
 		},
-		secondaryLight: {
-			500: "#ffd149",
-		},
-		secondaryDark: {
-			500: "c67100",
-		},
-		primaryText: {
+		textPrimary: {
 			500: "#212121",
 		},
-		secondaryText: {
+		textSecondary: {
 			500: "#fafafa",
 		},
 	},
 	breakpoints,
+	components: {
+		Button: {
+			variants: {
+				outline: {
+					borderColor: "brand.500",
+					":hover": {
+						bg: "brand.500",
+						color: "textPrimary.500",
+					},
+				},
+				solid: {
+					borderColor: "brand.500",
+					":hover": {
+						bg: "brand.500",
+						color: "textPrimary.500",
+					},
+				},
+			},
+		},
+	},
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
