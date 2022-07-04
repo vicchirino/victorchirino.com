@@ -1,0 +1,89 @@
+import { Box, Button, Flex, HStack, IconButton } from "@chakra-ui/react";
+import {
+	GithubIcon,
+	InstagramIcon,
+	LinkedinIcon,
+	ToptalIcon,
+	TwitterIcon,
+} from "../utils/icons";
+import { EmailIcon } from "@chakra-ui/icons";
+
+const ContactFooter: React.FC = () => {
+	const openSocialNetwork = ({ network }: { network: string }) => {
+		let url = "";
+		switch (network) {
+			case "email":
+				url = "mailto: vicchirino@gmail.com";
+				break;
+			case "linkedin":
+				url = "https://ar.linkedin.com/in/victor-chirino";
+				break;
+			case "github":
+				url = "https://github.com/vicchirino";
+				break;
+			case "toptal":
+				url = "https://www.toptal.com/resume/victor-gabriel-chirino";
+				break;
+			case "twitter":
+				url = "https://twitter.com/VicChirino";
+				break;
+			case "instagram":
+				url = "https://www.instagram.com/vicchirino/";
+				break;
+		}
+		window.open(url, "_blank")?.focus();
+	};
+
+	return (
+		<Box
+			sx={{
+				width: "100%",
+				padding: "25px",
+			}}
+		>
+			<Flex flexDirection="column" alignItems="center" justifyItems="center">
+				<Button
+					leftIcon={<EmailIcon />}
+					variant="solid"
+					onClick={() => openSocialNetwork({ network: "email" })}
+				>
+					Let's chat
+				</Button>
+				<HStack spacing="25px" paddingTop="25px">
+					<IconButton
+						aria-label="linkedin"
+						variant="outline"
+						onClick={() => openSocialNetwork({ network: "linkedin" })}
+						icon={<LinkedinIcon color="#044177" boxSize={7} />}
+					/>
+					<IconButton
+						aria-label="github"
+						variant="outline"
+						onClick={() => openSocialNetwork({ network: "github" })}
+						icon={<GithubIcon color="#044177" boxSize={7} />}
+					/>
+					<IconButton
+						aria-label="toptal"
+						variant="outline"
+						onClick={() => openSocialNetwork({ network: "toptal" })}
+						icon={<ToptalIcon color="#044177" boxSize={7} />}
+					/>
+					<IconButton
+						aria-label="twitter"
+						variant="outline"
+						onClick={() => openSocialNetwork({ network: "twitter" })}
+						icon={<TwitterIcon color="#044177" boxSize={7} />}
+					/>
+					<IconButton
+						aria-label="instagram"
+						variant="outline"
+						onClick={() => openSocialNetwork({ network: "instagram" })}
+						icon={<InstagramIcon color="#044177" boxSize={7} />}
+					/>
+				</HStack>
+			</Flex>
+		</Box>
+	);
+};
+
+export default ContactFooter;
