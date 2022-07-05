@@ -42,6 +42,8 @@ const theme: ThemeConfig = extendTheme({
 		},
 	},
 	breakpoints,
+	initialColorMode: "light",
+	useSystemColorMode: false,
 	components: {
 		Button: {
 			variants: {

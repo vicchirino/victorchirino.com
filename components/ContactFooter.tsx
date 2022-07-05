@@ -7,7 +7,7 @@ import {
 	TwitterIcon,
 } from "../utils/icons";
 import { EmailIcon } from "@chakra-ui/icons";
-import { forwardRef } from "react";
+import { forwardRef, LegacyRef } from "react";
 
 const ContactFooter = forwardRef((props, ref) => {
 	const openSocialNetwork = ({ network }: { network: string }) => {
@@ -38,10 +38,15 @@ const ContactFooter = forwardRef((props, ref) => {
 	return (
 		<Box
 			sx={{
-				width: "100%",
+				width: "70%",
 				padding: "25px",
+				margin: "auto",
 			}}
-			ref={ref}
+			ref={ref as LegacyRef<HTMLDivElement>}
+			_focus={{
+				border: "3px solid",
+				borderColor: "brand.600",
+			}}
 		>
 			<Flex flexDirection="column" alignItems="center" justifyItems="center">
 				<Button
