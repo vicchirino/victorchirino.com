@@ -6,11 +6,13 @@ import {
 	Text,
 	useColorMode,
 } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-const Header: React.FC = () => {
-	const router = useRouter();
+type HeaderProps = {
+	scrollToContact: () => void;
+};
+
+const Header: React.FC<HeaderProps> = ({ scrollToContact }) => {
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	const pagesWrray = [
@@ -24,6 +26,7 @@ const Header: React.FC = () => {
 			text: "Experience",
 			link: "/experience",
 		},
+		{ id: "contact", text: "Contact", onClick: () => scrollToContact() },
 		{
 			id: "night-mode",
 			button: (
@@ -94,8 +97,10 @@ const Header: React.FC = () => {
 									xl: "bold",
 									xxl: "bold",
 								}}
+								cursor="pointer"
+								onClick={p.onClick ? p.onClick : undefined}
 							>
-								<Link href={p.link}>{p.text}</Link>
+								{p.link ? <Link href={p.link}>{p.text}</Link> : p.text}
 							</Text>
 						) : (
 							p.button

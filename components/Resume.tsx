@@ -1,7 +1,7 @@
-import { Box, Flex, Image, Spacer, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, useColorMode } from "@chakra-ui/react";
 import { useState } from "react";
 
-const imagesPath = ["/me-1.jpg", "/me-2.jpg"];
+const imagesPath = ["images/me-1.jpg", "images/me-2.jpg"];
 
 const Resume: React.FC = () => {
 	const { colorMode } = useColorMode();

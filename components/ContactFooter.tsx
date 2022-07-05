@@ -7,8 +7,9 @@ import {
 	TwitterIcon,
 } from "../utils/icons";
 import { EmailIcon } from "@chakra-ui/icons";
+import { forwardRef } from "react";
 
-const ContactFooter: React.FC = () => {
+const ContactFooter = forwardRef((props, ref) => {
 	const openSocialNetwork = ({ network }: { network: string }) => {
 		let url = "";
 		switch (network) {
@@ -40,6 +41,7 @@ const ContactFooter: React.FC = () => {
 				width: "100%",
 				padding: "25px",
 			}}
+			ref={ref}
 		>
 			<Flex flexDirection="column" alignItems="center" justifyItems="center">
 				<Button
@@ -84,6 +86,8 @@ const ContactFooter: React.FC = () => {
 			</Flex>
 		</Box>
 	);
-};
+});
+
+ContactFooter.displayName = "ContactFooter";
 
 export default ContactFooter;
