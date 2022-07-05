@@ -5,7 +5,6 @@ import { useCallback, useRef } from "react";
 import ContactFooter from "../components/ContactFooter";
 import Header from "../components/Header";
 import Resume from "../components/Resume";
-import { useScrollIntoView } from "../hooks/useScrollIntoView";
 
 const Home: NextPage = () => {
 	const { colorMode } = useColorMode();
