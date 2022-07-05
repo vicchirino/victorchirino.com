@@ -54,7 +54,7 @@ const ContactFooter = forwardRef((props, ref) => {
 					variant="solid"
 					onClick={() => openSocialNetwork({ network: "email" })}
 				>
-					Let's chat
+					{"Let's chat"}
 				</Button>
 				<HStack spacing="25px" paddingTop="25px">
 					<IconButton
