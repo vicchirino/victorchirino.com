@@ -7,6 +7,7 @@ import {
 	useColorMode,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { shakeAnimation } from "../utils/icons";
 
 type HeaderProps = {
 	scrollToContact: () => void;
@@ -32,7 +33,14 @@ const Header: React.FC<HeaderProps> = ({ scrollToContact }) => {
 			button: (
 				<IconButton
 					aria-label="night-mode"
-					variant="outline"
+					sx={{
+						bgColor: "transparent",
+						":hover": {
+							color: colorMode === "dark" ? "brand.400" : "light.400",
+							bgColor: colorMode === "dark" ? "transparent" : "textPrimary.500",
+							animation: shakeAnimation,
+						},
+					}}
 					onClick={() => toggleColorMode()}
 					icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
 				/>
