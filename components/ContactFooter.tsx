@@ -1,11 +1,5 @@
-import { Box, Button, Flex, HStack, IconButton } from "@chakra-ui/react";
-import {
-	GithubIcon,
-	InstagramIcon,
-	LinkedinIcon,
-	ToptalIcon,
-	TwitterIcon,
-} from "../utils/icons";
+import { Box, Button, Flex, HStack, LinkOverlay } from "@chakra-ui/react";
+import { CustomIcon } from "../utils/icons";
 import { EmailIcon } from "@chakra-ui/icons";
 import { forwardRef, LegacyRef } from "react";
 
@@ -49,43 +43,36 @@ const ContactFooter = forwardRef((props, ref) => {
 			}}
 		>
 			<Flex flexDirection="column" alignItems="center" justifyItems="center">
-				<Button
-					leftIcon={<EmailIcon />}
-					variant="solid"
-					onClick={() => openSocialNetwork({ network: "email" })}
-				>
-					{"Let's chat"}
+				<Button leftIcon={<EmailIcon />} variant="solid">
+					<LinkOverlay href="mailto: vicchirino@gmail.com">
+						{"Let's chat"}
+					</LinkOverlay>
 				</Button>
 				<HStack spacing="25px" paddingTop="25px">
-					<IconButton
-						aria-label="linkedin"
-						variant="outline"
-						onClick={() => openSocialNetwork({ network: "linkedin" })}
-						icon={<LinkedinIcon boxSize={7} />}
+					<CustomIcon
+						name="linkedin"
+						href="https://ar.linkedin.com/in/victor-chirino"
+						boxSize={7}
 					/>
-					<IconButton
-						aria-label="github"
-						variant="outline"
-						onClick={() => openSocialNetwork({ network: "github" })}
-						icon={<GithubIcon boxSize={7} />}
+					<CustomIcon
+						name="github"
+						href="https://github.com/vicchirino"
+						boxSize={7}
 					/>
-					<IconButton
-						aria-label="toptal"
-						variant="outline"
-						onClick={() => openSocialNetwork({ network: "toptal" })}
-						icon={<ToptalIcon boxSize={7} />}
+					<CustomIcon
+						name="toptal"
+						href="https://www.toptal.com/resume/victor-gabriel-chirino"
+						boxSize={7}
 					/>
-					<IconButton
-						aria-label="twitter"
-						variant="outline"
-						onClick={() => openSocialNetwork({ network: "twitter" })}
-						icon={<TwitterIcon boxSize={7} />}
+					<CustomIcon
+						name="twitter"
+						href="https://twitter.com/VicChirino"
+						boxSize={7}
 					/>
-					<IconButton
-						aria-label="instagram"
-						variant="outline"
-						onClick={() => openSocialNetwork({ network: "instagram" })}
-						icon={<InstagramIcon boxSize={7} />}
+					<CustomIcon
+						name="instagram"
+						href="https://www.instagram.com/vicchirino/"
+						boxSize={7}
 					/>
 				</HStack>
 			</Flex>
