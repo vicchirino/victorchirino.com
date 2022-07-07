@@ -17,15 +17,21 @@ const NavBar: React.FC<HeaderProps> = ({ scrollToContact }) => {
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	const pagesWrray = [
+		// {
+		// 	id: "about",
+		// 	text: "About",
+		// 	link: "/about",
+		// },
+		// {
+		// 	id: "experience",
+		// 	text: "Experience",
+		// 	link: "/experience",
+		// },
 		{
-			id: "about",
-			text: "About",
-			link: "/about",
-		},
-		{
-			id: "experience",
-			text: "Experience",
-			link: "/experience",
+			id: "Resume",
+			text: "Resume",
+			link: "/victor-resume.pdf",
+			external: true,
 		},
 		{ id: "contact", text: "Contact", onClick: () => scrollToContact() },
 		{
@@ -108,7 +114,13 @@ const NavBar: React.FC<HeaderProps> = ({ scrollToContact }) => {
 								cursor="pointer"
 								onClick={p.onClick ? p.onClick : undefined}
 							>
-								{p.link ? <Link href={p.link}>{p.text}</Link> : p.text}
+								{p.link ? (
+									<Link href={p.link} isExternal={p.external}>
+										{p.text}
+									</Link>
+								) : (
+									p.text
+								)}
 							</Text>
 						) : (
 							p.button
