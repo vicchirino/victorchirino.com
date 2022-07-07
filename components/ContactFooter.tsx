@@ -1,34 +1,9 @@
 import { Box, Button, Flex, HStack, LinkOverlay } from "@chakra-ui/react";
-import { CustomIcon } from "../utils/icons";
+import { AnimatedIcon } from "./AnimatedIcon";
 import { EmailIcon } from "@chakra-ui/icons";
 import { forwardRef, LegacyRef } from "react";
 
 const ContactFooter = forwardRef((props, ref) => {
-	const openSocialNetwork = ({ network }: { network: string }) => {
-		let url = "";
-		switch (network) {
-			case "email":
-				url = "mailto: vicchirino@gmail.com";
-				break;
-			case "linkedin":
-				url = "https://ar.linkedin.com/in/victor-chirino";
-				break;
-			case "github":
-				url = "https://github.com/vicchirino";
-				break;
-			case "toptal":
-				url = "https://www.toptal.com/resume/victor-gabriel-chirino";
-				break;
-			case "twitter":
-				url = "https://twitter.com/VicChirino";
-				break;
-			case "instagram":
-				url = "https://www.instagram.com/vicchirino/";
-				break;
-		}
-		window.open(url, "_blank")?.focus();
-	};
-
 	return (
 		<Box
 			sx={{
@@ -49,27 +24,27 @@ const ContactFooter = forwardRef((props, ref) => {
 					</LinkOverlay>
 				</Button>
 				<HStack spacing="25px" paddingTop="25px">
-					<CustomIcon
+					<AnimatedIcon
 						name="linkedin"
 						href="https://ar.linkedin.com/in/victor-chirino"
 						boxSize={7}
 					/>
-					<CustomIcon
+					<AnimatedIcon
 						name="github"
 						href="https://github.com/vicchirino"
 						boxSize={7}
 					/>
-					<CustomIcon
+					<AnimatedIcon
 						name="toptal"
 						href="https://www.toptal.com/resume/victor-gabriel-chirino"
 						boxSize={7}
 					/>
-					<CustomIcon
+					<AnimatedIcon
 						name="twitter"
 						href="https://twitter.com/VicChirino"
 						boxSize={7}
 					/>
-					<CustomIcon
+					<AnimatedIcon
 						name="instagram"
 						href="https://www.instagram.com/vicchirino/"
 						boxSize={7}

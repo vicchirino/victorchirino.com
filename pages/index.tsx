@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useCallback, useRef } from "react";
 import ContactFooter from "../components/ContactFooter";
-import Header from "../components/Header";
+import NavBar from "../components/NavBar";
 import Resume from "../components/Resume";
 
 const Home: NextPage = () => {
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
 			paddingBottom="20px"
 			bgColor={colorMode === "dark" ? "dark.600" : "light.400"}
 		>
-			<Header scrollToContact={scrollIntoView} />
+			<NavBar scrollToContact={scrollIntoView} />
 			<Resume />
 			<ContactFooter ref={scrollIntoViewRef} />
 		</Box>
