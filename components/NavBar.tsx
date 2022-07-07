@@ -7,13 +7,13 @@ import {
 	useColorMode,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { shakeAnimation } from "../utils/icons";
+import { shakeAnimation } from "./CustomIcon";
 
 type HeaderProps = {
 	scrollToContact: () => void;
 };
 
-const Header: React.FC<HeaderProps> = ({ scrollToContact }) => {
+const NavBar: React.FC<HeaderProps> = ({ scrollToContact }) => {
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	const pagesWrray = [
@@ -120,4 +120,4 @@ const Header: React.FC<HeaderProps> = ({ scrollToContact }) => {
 	);
 };
 
-export default Header;
+export default NavBar;
