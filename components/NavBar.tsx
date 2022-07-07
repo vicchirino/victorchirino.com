@@ -7,7 +7,7 @@ import {
 	useColorMode,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { shakeAnimation } from "./CustomIcon";
+import { shakeAnimation } from "./AnimatedIcon";
 
 type HeaderProps = {
 	scrollToContact: () => void;

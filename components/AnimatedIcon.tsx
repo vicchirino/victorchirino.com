@@ -78,7 +78,7 @@ const getIconPath = (name: IconNames) => {
 	}
 };
 
-export const CustomIcon = ({ name, color, href, boxSize = 5 }: IconProps) => (
+export const AnimatedIcon = ({ name, color, href, boxSize = 5 }: IconProps) => (
 	<a href={href} target="_blank" rel="noreferrer">
 		<Icon
 			viewBox="0 0 24 24"

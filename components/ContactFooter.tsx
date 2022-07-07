@@ -1,5 +1,5 @@
 import { Box, Button, Flex, HStack, LinkOverlay } from "@chakra-ui/react";
-import { CustomIcon } from "./CustomIcon";
+import { AnimatedIcon } from "./AnimatedIcon";
 import { EmailIcon } from "@chakra-ui/icons";
 import { forwardRef, LegacyRef } from "react";
 
@@ -24,27 +24,27 @@ const ContactFooter = forwardRef((props, ref) => {
 					</LinkOverlay>
 				</Button>
 				<HStack spacing="25px" paddingTop="25px">
-					<CustomIcon
+					<AnimatedIcon
 						name="linkedin"
 						href="https://ar.linkedin.com/in/victor-chirino"
 						boxSize={7}
 					/>
-					<CustomIcon
+					<AnimatedIcon
 						name="github"
 						href="https://github.com/vicchirino"
 						boxSize={7}
 					/>
-					<CustomIcon
+					<AnimatedIcon
 						name="toptal"
 						href="https://www.toptal.com/resume/victor-gabriel-chirino"
 						boxSize={7}
 					/>
-					<CustomIcon
+					<AnimatedIcon
 						name="twitter"
 						href="https://twitter.com/VicChirino"
 						boxSize={7}
 					/>
-					<CustomIcon
+					<AnimatedIcon
 						name="instagram"
 						href="https://www.instagram.com/vicchirino/"
 						boxSize={7}
