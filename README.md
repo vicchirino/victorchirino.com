@@ -4,7 +4,10 @@ Personal web page of Victor Chirino
 
 Visit at www.victorchirino.com
 
-<img width="1425" alt="Screen Shot 2022-07-05 at 15 13 50" src="https://user-images.githubusercontent.com/3228237/177390181-856013d8-3436-41ab-b31b-4a13605e5794.png">
+<img width="1274" alt="image" src="https://user-images.githubusercontent.com/3228237/178059675-bb383538-9e3c-45de-8eeb-463815e0cb3f.png">
+
+<img width="1274" alt="image" src="https://user-images.githubusercontent.com/3228237/178059726-ee8940bb-6a49-4461-948b-1ce4d11917d7.png">
+
 
 ## Resources:
 
