@@ -5,18 +5,13 @@ import {
 	extendTheme,
 	type ThemeConfig,
 } from "@chakra-ui/react";
-import Head from "next/head";
-import Favicon from "../components/FavIcon";
 
 const breakpoints = {
-	xxxsm: "100px",
-	xxsm: "280px",
-	xsm: "320px",
-	sm: "400px",
-	md: "600px",
-	lg: "800px",
-	xl: "1000px",
-	xxl: "1200px",
+	base: "0px",
+	sm: "480px",
+	md: "768px",
+	lg: "992px",
+	xl: "1280px",
 };
 
 const theme: ThemeConfig = extendTheme({
@@ -42,6 +37,10 @@ const theme: ThemeConfig = extendTheme({
 		textSecondary: {
 			500: "#fafafa",
 		},
+	},
+	fonts: {
+		heading: `Fira Code`,
+		body: `Fira Code`,
 	},
 	breakpoints,
 	initialColorMode: "light",
@@ -71,11 +70,6 @@ const theme: ThemeConfig = extendTheme({
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
-			<Head>
-				<title>Victor Chirino</title>
-				<meta name="description" content="Victor Chirino personal page" />
-				<Favicon />
-			</Head>
 			<ChakraProvider theme={theme}>
 				<Component {...pageProps} />
 			</ChakraProvider>

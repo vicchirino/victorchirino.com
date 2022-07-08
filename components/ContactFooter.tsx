@@ -7,7 +7,7 @@ const ContactFooter = forwardRef((props, ref) => {
 	return (
 		<Box
 			sx={{
-				width: "70%",
+				width: "100%",
 				padding: "25px",
 				margin: "auto",
 			}}
