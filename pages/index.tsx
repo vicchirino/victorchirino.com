@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useCallback, useRef } from "react";
 import ContactFooter from "../components/ContactFooter";
 import NavBar from "../components/NavBar";
-import Resume from "../components/Resume";
+import Intro from "../components/Intro";
 
 const Home: NextPage = () => {
 	const { colorMode } = useColorMode();
@@ -20,13 +20,11 @@ const Home: NextPage = () => {
 
 	return (
 		<Box
-			minHeight="100vh"
 			width="100vw"
-			paddingBottom="20px"
 			bgColor={colorMode === "dark" ? "dark.600" : "light.400"}
 		>
 			<NavBar scrollToContact={scrollIntoView} />
-			<Resume />
+			<Intro />
 			<ContactFooter ref={scrollIntoViewRef} />
 		</Box>
 	);

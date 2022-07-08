@@ -7,7 +7,7 @@ import {
 	useColorMode,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { shakeAnimation } from "./AnimatedIcon";
+import { shakeAnimation } from "../styles/Transitions";
 
 type HeaderProps = {
 	scrollToContact: () => void;
@@ -16,7 +16,7 @@ type HeaderProps = {
 const NavBar: React.FC<HeaderProps> = ({ scrollToContact }) => {
 	const { colorMode, toggleColorMode } = useColorMode();
 
-	const pagesWrray = [
+	const pagesArray = [
 		// {
 		// 	id: "about",
 		// 	text: "About",
@@ -42,8 +42,8 @@ const NavBar: React.FC<HeaderProps> = ({ scrollToContact }) => {
 					sx={{
 						bgColor: "transparent",
 						":hover": {
-							color: colorMode === "dark" ? "brand.400" : "light.400",
-							bgColor: colorMode === "dark" ? "transparent" : "textPrimary.500",
+							color: colorMode === "dark" ? "textPrimary.500" : "light.400",
+							bgColor: colorMode === "dark" ? "brand.400" : "textPrimary.500",
 							animation: shakeAnimation,
 						},
 					}}
@@ -61,55 +61,39 @@ const NavBar: React.FC<HeaderProps> = ({ scrollToContact }) => {
 				height: "50px",
 				bgColor: colorMode === "dark" ? "dark.500" : "light.500",
 				top: "0",
+				position: "absolute",
 			}}
 			visibility={{
-				xxxsm: "visible",
-				xxsm: "visible",
-				xsm: "visible",
 				sm: "visible",
 				md: "visible",
 				lg: "visible",
-				xl: "visible",
-				xxl: "visible",
 			}}
 		>
 			<Flex justify="flex-end" align="center" flexDirection="row" height="100%">
-				{pagesWrray.map(p => (
+				{pagesArray.map(p => (
 					<Box
 						marginX={{
-							xxxsm: "2px",
-							xxsm: "5px",
-							xsm: "10px",
+							base: "5px",
 							sm: "10px",
 							md: "15px",
 							lg: "15px",
-							xl: "15px",
-							xxl: "20px",
 						}}
 						key={p.id}
-						color={colorMode === "dark" ? "brand.600" : "textPrimary.500"}
+						color={colorMode === "dark" ? "brand.500" : "textPrimary.500"}
 					>
 						{p.text ? (
 							<Text
 								fontSize={{
-									xxxsm: "xs",
-									xxsm: "xs",
-									xsm: "sm",
+									base: "sm",
 									sm: "md",
-									md: "lg",
+									md: "xl",
 									lg: "xl",
-									xl: "xl",
-									xxl: "xl",
 								}}
 								fontWeight={{
-									xxxsm: "light",
-									xxsm: "normal",
-									xsm: "semibold",
-									sm: "bold",
+									base: "normal",
+									sm: "semibold",
 									md: "bold",
 									lg: "bold",
-									xl: "bold",
-									xxl: "bold",
 								}}
 								cursor="pointer"
 								onClick={p.onClick ? p.onClick : undefined}
