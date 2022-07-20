@@ -42,9 +42,9 @@ export const borderColor = ({ color }: { color: string }) => keyframes`
 
 // Custom Icon animation Key-frames
 const animationKeyFrames = keyframes`
-0% { transform: translate(3px, 0); }
-50% { transform: translate(-3px, 0); }
-100% { transform: translate(0, 0) }
+  0% { transform: translate(3px, 0); }
+  50% { transform: translate(-3px, 0); }
+  100% { transform: translate(0, 0) }
 `;
 
 export const shakeAnimation = `${animationKeyFrames} 150ms 2 linear`;
