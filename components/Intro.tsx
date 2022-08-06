@@ -1,4 +1,5 @@
-import { Box, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
+import Layout from "./Layout";
 import { fadeUp } from "../styles/Transitions";
 
 const Intro: React.FC = () => {
@@ -18,10 +19,6 @@ const Intro: React.FC = () => {
 					justifyContent: "center",
 					border: "2px solid",
 					borderColor: "brand.500",
-					// animation: `${borderColor({
-					// 	color: "brand.500",
-					// })} 1s normal forwards ease-in-out`,
-					// animationDelay: "1400ms",
 				}}
 			>
 				<Text
@@ -88,30 +85,6 @@ const Intro: React.FC = () => {
 				</Text>
 			</Box>
 		</Layout>
-	);
-};
-
-type LayoutProps = {
-	children: React.ReactNode;
-};
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-	const { colorMode } = useColorMode();
-
-	return (
-		<Box
-			sx={{
-				width: "100%",
-				bgColor: colorMode === "dark" ? "dark.600" : "light.400",
-				height: "100vh",
-				paddingTop: "50px",
-				display: "flex",
-				alignItems: "center",
-				justifyContent: "center",
-			}}
-		>
-			{children}
-		</Box>
 	);
 };
 

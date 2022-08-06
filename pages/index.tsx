@@ -1,31 +1,47 @@
 import { Box, useColorMode } from "@chakra-ui/react";
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
 import { useCallback, useRef } from "react";
-import ContactFooter from "../components/ContactFooter";
 import NavBar from "../components/NavBar";
 import Intro from "../components/Intro";
+import Contact from "../components/Contact";
+import Projects from "../components/Projects";
 
 const Home: NextPage = () => {
 	const { colorMode } = useColorMode();
-	const router = useRouter();
-	const scrollIntoViewRef = useRef<null | HTMLDivElement>(null);
+	const contactScrollReference = useRef<null | HTMLDivElement>(null);
+	const projectsScrollReference = useRef<null | HTMLDivElement>(null);
 
-	const scrollIntoView = useCallback(() => {
-		if (!scrollIntoViewRef.current) {
+	const scrollToContact = useCallback(() => {
+		if (!contactScrollReference.current) {
 			return;
 		}
-		scrollIntoViewRef.current && scrollIntoViewRef.current.scrollIntoView();
-	}, [scrollIntoViewRef]);
+		contactScrollReference.current &&
+			contactScrollReference.current.scrollIntoView();
+	}, [contactScrollReference]);
+
+	const scrollToProject = useCallback(() => {
+		if (!contactScrollReference.current) {
+			return;
+		}
+		contactScrollReference.current &&
+			contactScrollReference.current.scrollIntoView({
+				block: "center",
+				inline: "center",
+			});
+	}, [contactScrollReference]);
 
 	return (
 		<Box
 			width="100vw"
 			bgColor={colorMode === "dark" ? "dark.600" : "light.400"}
 		>
-			<NavBar scrollToContact={scrollIntoView} />
+			<NavBar
+				scrollToContact={scrollToContact}
+				scrollToProject={scrollToProject}
+			/>
 			<Intro />
-			<ContactFooter ref={scrollIntoViewRef} />
+			<Projects ref={projectsScrollReference} />
+			<Contact ref={contactScrollReference} />
 		</Box>
 	);
 };
