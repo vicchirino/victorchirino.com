@@ -7,13 +7,17 @@ import {
 	useColorMode,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { shakeAnimation } from "../styles/Transitions";
+import { fadeUp, shakeAnimation } from "../styles/Transitions";
 
 type HeaderProps = {
 	scrollToContact: () => void;
+	scrollToProject: () => void;
 };
 
-const NavBar: React.FC<HeaderProps> = ({ scrollToContact }) => {
+const NavBar: React.FC<HeaderProps> = ({
+	scrollToContact,
+	scrollToProject,
+}) => {
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	const pagesArray = [
@@ -22,18 +26,18 @@ const NavBar: React.FC<HeaderProps> = ({ scrollToContact }) => {
 		// 	text: "About",
 		// 	link: "/about",
 		// },
-		// {
-		// 	id: "experience",
-		// 	text: "Experience",
-		// 	link: "/experience",
-		// },
+		{
+			id: "projects",
+			text: "Projects",
+			onClick: () => scrollToProject(),
+		},
+		{ id: "contact", text: "Contact", onClick: () => scrollToContact() },
 		{
 			id: "Resume",
 			text: "Resume",
 			link: "/victor-resume.pdf",
 			external: true,
 		},
-		{ id: "contact", text: "Contact", onClick: () => scrollToContact() },
 		{
 			id: "night-mode",
 			button: (
@@ -61,8 +65,9 @@ const NavBar: React.FC<HeaderProps> = ({ scrollToContact }) => {
 				height: "50px",
 				bgColor: colorMode === "dark" ? "dark.500" : "light.500",
 				top: "0",
-				position: "absolute",
+				position: "fixed",
 			}}
+			zIndex={100}
 			visibility={{
 				sm: "visible",
 				md: "visible",
@@ -70,7 +75,7 @@ const NavBar: React.FC<HeaderProps> = ({ scrollToContact }) => {
 			}}
 		>
 			<Flex justify="flex-end" align="center" flexDirection="row" height="100%">
-				{pagesArray.map(p => (
+				{pagesArray.map((p, idx) => (
 					<Box
 						marginX={{
 							base: "5px",
@@ -80,6 +85,11 @@ const NavBar: React.FC<HeaderProps> = ({ scrollToContact }) => {
 						}}
 						key={p.id}
 						color={colorMode === "dark" ? "brand.500" : "textPrimary.500"}
+						sx={{
+							opacity: 0,
+							animation: `${fadeUp} 350ms normal forwards ease-in-out`,
+							animationDelay: `${1050 + 350 * (idx + 1)}ms`,
+						}}
 					>
 						{p.text ? (
 							<Text
