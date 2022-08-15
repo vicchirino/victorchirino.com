@@ -3,8 +3,10 @@ import { AnimatedIcon } from "./AnimatedIcon";
 import { EmailIcon } from "@chakra-ui/icons";
 import { forwardRef, LegacyRef } from "react";
 import Layout from "./Layout";
+import { useIntl } from "react-intl";
 
 const Contact = forwardRef((_, ref) => {
+  const { formatMessage } = useIntl();
   return (
     <Layout fullHeight={false}>
       <Box
@@ -22,7 +24,7 @@ const Contact = forwardRef((_, ref) => {
         <Flex flexDirection="column" alignItems="center" justifyItems="center">
           <Button leftIcon={<EmailIcon />} variant="solid">
             <LinkOverlay href="mailto: vicchirino@gmail.com">
-              {"Let's chat"}
+              {formatMessage({ id: "Contact.Button" })}
             </LinkOverlay>
           </Button>
           <HStack spacing="25px" paddingTop="25px">

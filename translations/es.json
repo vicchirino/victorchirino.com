@@ -1,0 +1,11 @@
+{
+  "NavBar.Resume": "Resumen",
+  "NavBar.Projects": "Proyectos",
+  "NavBar.Contact": "Contacto", 
+  "Intro.Title": "Bienvenido, mi nombre es",
+  "Intro.Description": "Soy un ingeniero en sistemas radicado en Buenos Aires, Argentina. Tengo una sólida experiencia en desarrollo front-end, con más de 7 años trabajando como desarrollador iOS y más de 4 años trabajando como desarrollador web.",
+  "Projects.Bot.Description": "El bot de Twitter está escrito en Python y publica citas aleatorias del personaje principal de Monkey Island, Guybrush Threepwood. El bot también publica capturas de pantalla del juego y responde con una cita aleatoria si alguien lo menciona. El proyecto utiliza la API de Twitter, incluida la autenticación 2.0. Las capturas de pantalla se generan con un script de python que toma el video completo del juego, toma sus cuadros y los guarda.",
+  "Projects.Theme.Description": "Un conjunto de temas que utilizan paletas de juegos de Monkey Island para VS Code. Mêlée island es un tema de color oscuro para VSCode publicado en el VSCode marketplace. Como parte de esto, hay un sitio web disponible desarrollado en Typescript y publicado en vercel.",
+  "Projects.Meli.Description": "Una aplicación de iOS que copia algunas funcionalidades de la aplicación de Mercado Libre. El proyecto utiliza la API que ellos proporcionan. La aplicación permite buscar elementos y ver los detalles, utilizando un servicio web orientado a protocolos. El proyecto utiliza las últimas versiones de Swift y iOS.",
+  "Contact.Button": "Charlemos"
+}

@@ -6,7 +6,8 @@ import {
   type ThemeConfig
 } from "@chakra-ui/react";
 import { IntlProvider } from "react-intl";
-import strings from "../translations/en.json";
+import english from "../translations/en.json";
+import spanish from "../translations/es.json";
 
 const breakpoints = {
   base: "0px",
@@ -72,7 +73,7 @@ const theme: ThemeConfig = extendTheme({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <IntlProvider locale="en" messages={strings}>
+      <IntlProvider locale="en" messages={english}>
         <ChakraProvider theme={theme}>
           <Component {...pageProps} />
         </ChakraProvider>
