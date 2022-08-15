@@ -28,8 +28,7 @@
     "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,json,md,css,scss,html}'"
   },
   "lint-staged": {
-		"*.tsx": "prettir --write",
-    "**/*.{ts,tsx,js,jsx}": [
+    "victorchirino.com/**/*.{ts,tsx,js,jsx}": [
       "prettier --write",
       "eslint --max-warnings=0 --fix"
     ]
