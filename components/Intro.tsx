@@ -1,8 +1,10 @@
 import { Box, Text } from "@chakra-ui/react";
 import Layout from "./Layout";
 import { fadeUp } from "../styles/Transitions";
+import { useIntl } from "react-intl";
 
 const Intro: React.FC = () => {
+  const { formatMessage } = useIntl();
   return (
     <Layout>
       <Box
@@ -38,7 +40,7 @@ const Intro: React.FC = () => {
             animationDelay: "350ms"
           }}
         >
-          Welcome, my name is
+          {formatMessage({ id: "Intro.Title" })}
         </Text>
         <Text
           sx={{
@@ -58,7 +60,7 @@ const Intro: React.FC = () => {
             animationDelay: "700ms"
           }}
         >
-          Victor Chirino
+          {"Victor Chirino"}
         </Text>
         <Text
           sx={{
@@ -78,10 +80,7 @@ const Intro: React.FC = () => {
             animationDelay: "1050ms"
           }}
         >
-          I’m a Software engineer based in Buenos Aires, Argentina. I have a
-          strong background in front-end development, with more than 7 years
-          working as an iOS developer and more than 4 years working as a web
-          developer.
+          {formatMessage({ id: "Intro.Description" })}
         </Text>
       </Box>
     </Layout>
