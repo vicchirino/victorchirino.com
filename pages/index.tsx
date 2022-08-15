@@ -1,10 +1,10 @@
-import { Box, useColorMode } from '@chakra-ui/react';
-import type { NextPage } from 'next';
-import { useCallback, useRef } from 'react';
-import NavBar from '../components/NavBar';
-import Intro from '../components/Intro';
-import Contact from '../components/Contact';
-import Projects from '../components/Projects';
+import { Box, useColorMode } from "@chakra-ui/react";
+import type { NextPage } from "next";
+import { useCallback, useRef } from "react";
+import NavBar from "../components/NavBar";
+import Intro from "../components/Intro";
+import Contact from "../components/Contact";
+import Projects from "../components/Projects";
 
 const Home: NextPage = () => {
   const { colorMode } = useColorMode();
@@ -25,15 +25,15 @@ const Home: NextPage = () => {
     }
     contactScrollReference.current &&
       contactScrollReference.current.scrollIntoView({
-        block: 'center',
-        inline: 'center'
+        block: "center",
+        inline: "center"
       });
   }, [contactScrollReference]);
 
   return (
     <Box
       width="100vw"
-      bgColor={colorMode === 'dark' ? 'dark.600' : 'light.400'}
+      bgColor={colorMode === "dark" ? "dark.600" : "light.400"}
     >
       <NavBar
         scrollToContact={scrollToContact}

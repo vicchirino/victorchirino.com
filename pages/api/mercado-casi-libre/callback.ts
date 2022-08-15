@@ -2,14 +2,14 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
-	name: string;
+  name: string;
 };
 
 export default function handler(
-	req: NextApiRequest,
-	res: NextApiResponse<Data>
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
 ) {
-	let code = req.query.code;
-	let state = req.query.state;
-	res.redirect(`victorchirino.com://?code=${code}&state=${state}`);
+  let code = req.query.code;
+  let state = req.query.state;
+  res.redirect(`victorchirino.com://?code=${code}&state=${state}`);
 }

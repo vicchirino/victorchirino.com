@@ -8,7 +8,6 @@ Visit at www.victorchirino.com
 
 <img width="1274" alt="image" src="https://user-images.githubusercontent.com/3228237/178059726-ee8940bb-6a49-4461-948b-1ce4d11917d7.png">
 
-
 ## Resources:
 
 - Chackra UI: https://chakra-ui.com/
