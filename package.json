@@ -28,7 +28,7 @@
     "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,json,md,css,scss,html}'"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
+    "**/*.{js,jsx,ts,tsx}": [
       "prettier --write",
       "eslint --max-warnings=0 --fix"
     ]
