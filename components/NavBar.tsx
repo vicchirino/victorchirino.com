@@ -9,6 +9,7 @@ import {
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { fadeUp, shakeAnimation } from "../styles/Transitions";
 import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
 
 type HeaderProps = {
   scrollToContact: () => void;
@@ -19,6 +20,7 @@ const NavBar: React.FC<HeaderProps> = ({
   scrollToContact,
   scrollToProject
 }) => {
+  const { locale, locales } = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
   const { formatMessage } = useIntl();
   const pagesArray = [
@@ -44,10 +46,15 @@ const NavBar: React.FC<HeaderProps> = ({
       external: true
     },
     {
-      id: "night-mode",
+      id: "locale",
+      text: locale === "es" ? "🇺🇸" : "🇦🇷",
+      link: locale === "es" ? "/en-US" : "/es"
+    },
+    {
+      id: "translations",
       button: (
         <IconButton
-          aria-label="night-mode"
+          aria-label="translations"
           sx={{
             bgColor: "transparent",
             ":hover": {
