@@ -20,6 +20,23 @@ type ProjectSectionProps = {
 const ProjectSection: React.FC<ProjectSectionProps> = ({ project }) => {
   return (
     <Box>
+      <Text
+        sx={{
+          fontSize: {
+            base: "md",
+            md: "lg",
+            lg: "xl"
+          },
+          fontWeight: {
+            base: "semibold",
+            md: "semibold",
+            lg: "bold"
+          },
+          paddingBottom: "10px"
+        }}
+      >
+        {project.title}
+      </Text>
       <Flex
         flexDirection={{
           base: "column",
@@ -43,7 +60,13 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ project }) => {
         </Box>
         <Box
           sx={{
-            padding: "0 10px"
+            padding: {
+              base: "0",
+              sm: "0",
+              md: "0 10px",
+              lg: "0 10px",
+              xl: "0 10px"
+            }
           }}
           width={{
             base: "100%",
@@ -68,22 +91,6 @@ const ProjectDescription: React.FC<{ project: Project }> = ({ project }) => {
         height: "100%"
       }}
     >
-      <Text
-        sx={{
-          fontSize: {
-            base: "md",
-            md: "lg",
-            lg: "xl"
-          },
-          fontWeight: {
-            base: "semibold",
-            md: "semibold",
-            lg: "bold"
-          }
-        }}
-      >
-        {project.title}
-      </Text>
       <Flex flexDirection="column" justifyContent="space-between" height="100%">
         <Text
           sx={{
@@ -95,7 +102,13 @@ const ProjectDescription: React.FC<{ project: Project }> = ({ project }) => {
             fontWeight: {
               base: "regular"
             },
-            paddingTop: "25px"
+            paddingTop: {
+              base: "25px",
+              sm: "25px",
+              md: "0",
+              lg: "0",
+              xl: "0"
+            }
           }}
         >
           {project.description}
