@@ -8,6 +8,8 @@ import {
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { fadeUp, shakeAnimation } from "../styles/Transitions";
+import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
 
 type HeaderProps = {
   scrollToContact: () => void;
@@ -18,8 +20,9 @@ const NavBar: React.FC<HeaderProps> = ({
   scrollToContact,
   scrollToProject
 }) => {
+  const { locale, locales } = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
-
+  const { formatMessage } = useIntl();
   const pagesArray = [
     // {
     // 	id: "about",
@@ -28,21 +31,30 @@ const NavBar: React.FC<HeaderProps> = ({
     // },
     {
       id: "projects",
-      text: "Projects",
+      text: formatMessage({ id: "NavBar.Projects" }),
       onClick: () => scrollToProject()
     },
-    { id: "contact", text: "Contact", onClick: () => scrollToContact() },
+    {
+      id: "contact",
+      text: formatMessage({ id: "NavBar.Contact" }),
+      onClick: () => scrollToContact()
+    },
     {
       id: "Resume",
-      text: "Resume",
+      text: formatMessage({ id: "NavBar.Resume" }),
       link: "/victor-resume.pdf",
       external: true
     },
     {
-      id: "night-mode",
+      id: "locale",
+      text: locale === "es" ? "🇺🇸" : "🇦🇷",
+      link: locale === "es" ? "/en-US" : "/es"
+    },
+    {
+      id: "translations",
       button: (
         <IconButton
-          aria-label="night-mode"
+          aria-label="translations"
           sx={{
             bgColor: "transparent",
             ":hover": {
@@ -57,7 +69,6 @@ const NavBar: React.FC<HeaderProps> = ({
       )
     }
   ];
-
   return (
     <Box
       sx={{

@@ -5,6 +5,10 @@ import {
   extendTheme,
   type ThemeConfig
 } from "@chakra-ui/react";
+import { IntlProvider } from "react-intl";
+import english from "../translations/en-US.json";
+import spanish from "../translations/es.json";
+import { useRouter } from "next/router";
 
 const breakpoints = {
   base: "0px",
@@ -68,11 +72,14 @@ const theme: ThemeConfig = extendTheme({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { locale } = useRouter();
   return (
     <>
-      <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
-      </ChakraProvider>
+      <IntlProvider locale="es" messages={locale === "es" ? spanish : english}>
+        <ChakraProvider theme={theme}>
+          <Component {...pageProps} />
+        </ChakraProvider>
+      </IntlProvider>
     </>
   );
 }
