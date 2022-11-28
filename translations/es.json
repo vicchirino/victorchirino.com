@@ -1,11 +1,15 @@
 {
   "NavBar.Resume": "Resumen",
   "NavBar.Projects": "Proyectos",
-  "NavBar.Contact": "Contacto", 
+  "NavBar.Contact": "Contacto",
   "Intro.Title": "Bienvenido, mi nombre es",
-  "Intro.Description": "Soy un ingeniero en sistemas radicado en Buenos Aires, Argentina. Tengo una sólida experiencia en desarrollo front-end, con más de 7 años trabajando como desarrollador iOS y más de 4 años trabajando como desarrollador web.",
+  "Intro.Description": "Soy un ingeniero en sistemas radicado en Buenos Aires, Argentina. Tengo una sólida experiencia en desarrollo front-end, con más de 8 años trabajando como desarrollador iOS y más de 5 años trabajando como desarrollador web.",
   "Projects.Bot.Description": "El bot de Twitter está escrito en Python y publica citas aleatorias del personaje principal de Monkey Island, Guybrush Threepwood. El bot también publica capturas de pantalla del juego y responde con una cita aleatoria si alguien lo menciona. El proyecto utiliza la API de Twitter, incluida la autenticación 2.0. Las capturas de pantalla se generan con un script de python que toma el video completo del juego, toma sus cuadros y los guarda.",
   "Projects.Theme.Description": "Un conjunto de temas que utilizan paletas de juegos de Monkey Island para VS Code. Mêlée island es un tema de color oscuro para VSCode publicado en el VSCode marketplace. Como parte de esto, hay un sitio web disponible desarrollado en Typescript y publicado en vercel.",
   "Projects.Meli.Description": "Una aplicación de iOS que copia algunas funcionalidades de la aplicación de Mercado Libre. El proyecto utiliza la API que ellos proporcionan. La aplicación permite buscar elementos y ver los detalles, utilizando un servicio web orientado a protocolos. El proyecto utiliza las últimas versiones de Swift y iOS.",
+  "Projects.WC.Title": "World Cup 2022 Project",
+  "Projects.WC.Description": "Antes de la Copa del Mundo 2022, creé un bot usando Node.js que publica diferentes tipos de notificaciones sobre la Copa del Mundo. El bot usa la API de Twitter y la API-Football para obtener los datos. El bot se implementa en un servidor y funciona las 24 horas del día, los 7 días de la semana. El proyecto también incluye un sitio web que muestra el partido de la Copa Mundial y permite a los usuarios descargarlo como un archivo de calendario.",
+  "Projects.Magic.Title": "Magic The Gathering Project",
+  "Projects.Magic.Description": "Un proyecto que usa la API de Scryfall para obtener una carta aleatoria diariamente. La aplicación se basa en Swift UI y Combine. Está utilizando Swift Package Manager para desacoplar la capa de red. La aplicación utiliza Core Data para permitir que el usuario guarde las tarjetas y las vea más tarde. La aplicación está disponible para pruebas beta en TestFlight y se implementa mediante Fastlane.",
   "Contact.Button": "Charlemos"
 }

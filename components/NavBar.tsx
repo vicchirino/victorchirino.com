@@ -20,7 +20,7 @@ const NavBar: React.FC<HeaderProps> = ({
   scrollToContact,
   scrollToProject
 }) => {
-  const { locale, locales } = useRouter();
+  const router = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
   const { formatMessage } = useIntl();
   const pagesArray = [
@@ -42,13 +42,20 @@ const NavBar: React.FC<HeaderProps> = ({
     {
       id: "Resume",
       text: formatMessage({ id: "NavBar.Resume" }),
-      link: "/victor-resume.pdf",
+      link:
+        router.locale === "es"
+          ? "/victor-resume-es.pdf"
+          : "/victor-resume-en.pdf",
       external: true
     },
     {
       id: "locale",
-      text: locale === "es" ? "🇺🇸" : "🇦🇷",
-      link: locale === "es" ? "/en-US" : "/es"
+      text: router.locale === "es" ? "🇺🇸" : "🇦🇷",
+      onClick: () => {
+        router.push(router.asPath, router.asPath, {
+          locale: router.locale === "es" ? "en-US" : "es"
+        });
+      }
     },
     {
       id: "translations",

@@ -49,7 +49,7 @@ const Projects = forwardRef(({}, ref) => {
                 "VSCode",
                 "Typescript",
                 "React",
-                "NextJS",
+                "NextJs",
                 "Vercel"
               ]
             }}
@@ -67,6 +67,41 @@ const Projects = forwardRef(({}, ref) => {
                 "Mercado Libre API",
                 "Snapkit",
                 "UIKit"
+              ]
+            }}
+          />
+          <Spacer />
+          <ProjectSection
+            project={{
+              title: formatMessage({ id: "Projects.WC.Title" }),
+              description: formatMessage({ id: "Projects.WC.Description" }),
+              multimedia: "/images/projects/wc-bot-project-1.png",
+              github: "https://github.com/vicchirino/WCBot",
+              website: "https://world-cup-calendar-eight.vercel.app",
+              twitter: "https://twitter.com/FIFAWCBot",
+              technologies: [
+                "Football API",
+                "Typescript",
+                "NodeJs",
+                "NextJs",
+                "Vercel"
+              ]
+            }}
+          />
+          <Spacer />
+          <ProjectSection
+            project={{
+              title: formatMessage({ id: "Projects.Magic.Title" }),
+              description: formatMessage({ id: "Projects.Magic.Description" }),
+              multimedia: "/images/projects/recording.gif",
+              github:
+                "https://github.com/vicchirino/magic-the-gathering-random-card",
+              technologies: [
+                "Swift UI",
+                "Core Data",
+                "Swift Package Manager",
+                "Fastlane",
+                "Combine"
               ]
             }}
           />

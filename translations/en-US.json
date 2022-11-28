@@ -3,9 +3,13 @@
   "NavBar.Projects": "Projects",
   "NavBar.Contact": "Contact",
   "Intro.Title": "Welcome, my name is",
-  "Intro.Description": "I’m a Software engineer based in Buenos Aires, Argentina. I have a strong background in front-end development, with more than 7 years working as an iOS developer and more than 4 years working as a web developer.",
+  "Intro.Description": "I’m a Software engineer based in Buenos Aires, Argentina. I have a strong background in front-end development, with more than 8 years working as an iOS developer and more than 5 years working as a web developer.",
   "Projects.Bot.Description": "The Twitter bot is written in python that posts random quotes from Monkey Island's main character, Guybrush Threepwood. The bot also posts screenshots of the game and replies with a random quote if someone mentions it. The project uses the Twitter API including auth 2.0. Screenshots are generated with a python script that takes the full game-play video, takes its frames, and saves them.",
   "Projects.Theme.Description": "A set of themes using Monkey Island games palettes for VS Code. Mêlée island is a dark color theme for VSCode that is published in the VSCode marketplace. As part of it, there is a website available built-in Typescript and React and deployed into vercel.",
   "Projects.Meli.Description": "An iOS application that copies a few functionalities of the Mercado Libre iOS app. The project uses the API that they provide. The app allows to search items and sees the detail, fetching the specific endpoints and using a protocol-oriented webservice. The project uses the latest swift and iOS versions.",
+  "Projects.WC.Title": "World Cup 2022 Project",
+  "Projects.WC.Description": "Before the World Cup 2022, I created a bot using Node.js that posts different types of notifications about the World Cup. The bot uses the Twitter API and the API-Football to get the data. The bot is deployed to a server and runs 24/7. The project also includes a website that shows the World Cup fixture and allows users to download it as a calendar file.",
+  "Projects.Magic.Title": "Magic The Gathering Project",
+  "Projects.Magic.Description": "A project that uses the API of Scryfall to get a random card daily. The app is built on top of Swift UI and Combine. It is using Swift Package Manager for decoupling the network layer. The app uses Core Data to allow the user to save the cards and see them later. The app is available for beta testing in TestFlight and is deployed using Fastlane.",
   "Contact.Button": "Let's chat"
 }
