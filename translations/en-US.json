@@ -11,5 +11,5 @@
   "Projects.WC.Description": "Before the World Cup 2022, I created a bot using Node.js that posts different types of notifications about the World Cup. The bot uses the Twitter API and the API-Football to get the data. The bot is deployed to a server and runs 24/7. The project also includes a website that shows the World Cup fixture and allows users to download it as a calendar file.",
   "Projects.Magic.Title": "Magic The Gathering Project",
   "Projects.Magic.Description": "A project that uses the API of Scryfall to get a random card daily. The app is built on top of Swift UI and Combine. It is using Swift Package Manager for decoupling the network layer. The app uses Core Data to allow the user to save the cards and see them later. The app is available for beta testing in TestFlight and is deployed using Fastlane.",
-  "Contact.Button": "Let's chat"
+  "Contact.Button": "Let’s chat"
 }
